@@ -27,7 +27,7 @@ const Details = ({ count }) => {
                   {Object.keys(item.currencies).map(val => <p  className="text-xl" key={val}>Currencies: {item.currencies[`${val}`].name}</p>)}
                   {Object.keys(item.languages).map(key => <p  className="text-xl" key={key}>Languages: {item.languages[`${key}`]}</p>)}
                   <h1  className="text-xl font-semibold">Border Countries:</h1>
-                  <div className="w-100 mt-5" >
+                  <div className="w-100 mt-5 flex flex-wrap" >
                     {item.borders.map((val)=> <Link to={`/${val}`} className="m-2 px-4 py-2 rounded shadow-[1px_1px_5px_gray]">{val}</Link>)}
                   </div>
                 </div>
