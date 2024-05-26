@@ -25,10 +25,10 @@ const Details = ({ count }) => {
                   <p  className="text-xl">Capital: {item.capital}</p>
                   <br />
                   {Object.keys(item.currencies).map(val => <p  className="text-xl" key={val}>Currencies: {item.currencies[`${val}`].name}</p>)}
-                  {Object.keys(item.languages).map(key => <p  className="text-xl" key={key}>Languages: {item.languages[`${key}`]}</p>)}
+                  <p className="text-2x1">Languages:{Object.keys(item.languages).map(key => <span className="text-x1"> {item.languages[`${key}`]},</span>)}</p>
                   <h1  className="text-xl font-semibold">Border Countries:</h1>
                   <div className="w-100 mt-5 flex flex-wrap" >
-                    {item.borders.map((val)=> <Link to={`/${val}`} className="m-2 px-4 py-2 rounded shadow-[1px_1px_5px_gray]">{val}</Link>)}
+                    {item.borders && item.borders.map((val)=> <Link to={`/${val}`} className="m-2 px-4 py-2 rounded shadow-[1px_1px_5px_gray]">{val}</Link>)}
                   </div>
                 </div>
 
