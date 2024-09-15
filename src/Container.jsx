@@ -12,7 +12,7 @@ const Container = (props) => {
           />
           
         <select name="" id="" placeholder='Select contries' className='shadow-[1px_1px_5px_gray] border  h-9 w-40 rounded' onChange={(e)=>{props.setUrl(e.target.value); props.setCount([])}}>
-            <option value="All">All</option>
+            <option value="all">All</option>
             <option value="region/Africa">Africa</option>
             <option value="region/America">America</option>
             <option value="region/Asia">Asia</option>
